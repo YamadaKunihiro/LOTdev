@@ -1,0 +1,17 @@
+Group,Image,Time
+Normal,shiichan_normal_1,500
+Normal,shiichan_normal_2,500
+Fine,shiichan_normal_1,500
+Fine,shiichan_fine,500
+Hot,shiichan_hot1,500
+Hot,shiichan_hot2,500
+Cold,shiichan_cold1,500
+Cold,shiichan_cold2,500
+Dry,shiichan_kansou1,500
+Dry,shiichan_kansou2,500
+Mold,shiichan_kabi1,500
+Mold,shiichan_kabi2,500
+Mite,shiichan_dani1,500
+Mite,shiichan_dani2,500
+Virus,shiichan_vils1,500
+Virus,shiichan_vils2,500

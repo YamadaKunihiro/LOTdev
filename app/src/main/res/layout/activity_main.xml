@@ -1,0 +1,165 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools" android:layout_width="match_parent"
+    android:layout_height="match_parent" android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    tools:context="com.example.yamakuni0810_lotdev.lotdev.Main"
+    android:id="@+id/relativeLayout">
+
+    <GridLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:id="@+id/gridLayout"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true">
+
+        <Button
+            android:layout_width="109dp"
+            android:layout_height="60dp"
+            android:text="温度テスト"
+            android:id="@+id/button"
+            android:onClick="onClick"
+            android:layout_alignTop="@+id/enemyViewR"
+            android:layout_alignRight="@+id/button4"
+            android:layout_alignEnd="@+id/button4"
+            android:layout_row="0"
+            android:layout_column="0" />
+
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="59dp"
+            android:text="温度テスト２"
+            android:id="@+id/button3"
+            android:onClick="onClick"
+            android:layout_below="@+id/button2"
+            android:layout_alignRight="@+id/button"
+            android:layout_alignEnd="@+id/button"
+            android:layout_row="1"
+            android:layout_column="0" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textAppearance="?android:attr/textAppearanceSmall"
+            android:text="温度"
+            android:id="@+id/tempView"
+            android:layout_alignParentTop="true"
+            android:layout_alignLeft="@+id/enemyViewR"
+            android:layout_alignStart="@+id/enemyViewR"
+            android:layout_row="1"
+            android:layout_column="1" />
+
+        <Button
+            android:layout_width="110dp"
+            android:layout_height="60dp"
+            android:text="湿度テスト"
+            android:id="@+id/button2"
+            android:onClick="onClick"
+            android:layout_alignParentTop="true"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true"
+            android:layout_row="2"
+            android:layout_column="0" />
+
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="65dp"
+            android:text="湿度テスト２"
+            android:id="@+id/button4"
+            android:onClick="onClick"
+            android:layout_alignParentTop="true"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true"
+            android:layout_row="3"
+            android:layout_column="0" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textAppearance="?android:attr/textAppearanceSmall"
+            android:text="湿度"
+            android:id="@+id/hudiView"
+            android:layout_alignBottom="@+id/enemyViewR"
+            android:layout_row="3"
+            android:layout_column="1" />
+
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="65dp"
+            android:text="カレンダー"
+            android:id="@+id/toCal"
+            android:layout_row="4"
+            android:layout_column="0"
+            android:layout_marginTop="0dp"
+            android:onClick="onClick" />
+
+    </GridLayout>
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentEnd="true">
+
+        <ImageView
+            android:layout_width="322dp"
+            android:layout_height="277dp"
+            android:id="@+id/mainCharaView"
+            android:layout_alignParentTop="true"
+            android:layout_alignParentRight="true"
+            android:layout_alignParentEnd="true"
+            android:layout_gravity="center_horizontal|bottom" />
+
+        <ImageView
+            android:layout_width="90dp"
+            android:layout_height="90dp"
+            android:id="@+id/enemyViewR"
+            android:layout_alignParentTop="true"
+            android:layout_alignParentRight="true"
+            android:layout_alignParentEnd="true"
+            android:layout_gravity="right|top"
+            android:layout_marginTop="30dp"
+            android:layout_marginRight="40dp" />
+
+        <ImageView
+            android:layout_width="90dp"
+            android:layout_height="90dp"
+            android:id="@+id/enemyViewL"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentTop="true"
+            android:layout_gravity="left|top"
+            android:layout_marginTop="40dp" />
+
+        <ImageView
+            android:layout_width="70dp"
+            android:layout_height="70dp"
+            android:id="@+id/enemyViewR2"
+            android:layout_gravity="right|center_vertical"
+            android:layout_marginRight="10dp" />
+
+        <ImageView
+            android:layout_width="70dp"
+            android:layout_height="70dp"
+            android:id="@+id/enemyViewL2"
+            android:layout_gravity="left|center_vertical"
+            android:layout_marginLeft="10dp" />
+
+        <ImageView
+            android:layout_width="80dp"
+            android:layout_height="80dp"
+            android:id="@+id/enemyViewC"
+            android:layout_gravity="center_horizontal|top" />
+
+        <ImageView
+            android:layout_width="80dp"
+            android:layout_height="80dp"
+            android:id="@+id/enemyViewC2"
+            android:layout_gravity="center"
+            android:layout_marginTop="-40dp" />
+
+    </FrameLayout>
+
+</RelativeLayout>

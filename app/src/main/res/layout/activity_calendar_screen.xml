@@ -1,0 +1,543 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools" android:layout_width="match_parent"
+    android:layout_height="match_parent" android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    tools:context="com.example.yamakuni0810_lotdev.lotdev.CalendarScreen">
+
+    <GridLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentEnd="true">
+
+        <TextView
+            android:layout_width="189dp"
+            android:layout_height="44dp"
+            android:textAppearance="?android:attr/textAppearanceLarge"
+            android:text="年"
+            android:id="@+id/yearText"
+            android:layout_row="0"
+            android:layout_column="3"
+            android:layout_marginTop="10dp"
+            android:layout_marginBottom="20dp"
+            android:layout_columnWeight="0"
+            android:layout_columnSpan="4" />
+
+        <TextView
+            android:layout_width="50dp"
+            android:layout_height="40dp"
+            android:textAppearance="?android:attr/textAppearanceMedium"
+            android:text="先月"
+            android:id="@+id/lastMonth"
+            android:layout_row="1"
+            android:layout_column="1"
+            android:onClick="onClick" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textAppearance="?android:attr/textAppearanceLarge"
+            android:text="月"
+            android:id="@+id/MonthText"
+            android:layout_row="1"
+            android:layout_column="3" />
+
+        <TextView
+            android:layout_width="50dp"
+            android:layout_height="40dp"
+            android:textAppearance="?android:attr/textAppearanceMedium"
+            android:text="翌月"
+            android:id="@+id/nextMonth"
+            android:layout_row="1"
+            android:layout_column="5"
+            android:onClick="onClick" />
+
+        <TextView
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:textAppearance="?android:attr/textAppearanceMedium"
+            android:text="日"
+            android:id="@+id/sunText"
+            android:layout_column="0"
+            android:layout_marginLeft="0dp"
+            android:layout_row="2"
+            android:layout_marginTop="30dp" />
+
+        <TextView
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:textAppearance="?android:attr/textAppearanceMedium"
+            android:text="月"
+            android:id="@+id/monText"
+            android:layout_column="1"
+            android:layout_marginLeft="10dp"
+            android:layout_row="2"
+            android:layout_marginTop="30dp" />
+
+        <TextView
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:textAppearance="?android:attr/textAppearanceMedium"
+            android:text="火"
+            android:id="@+id/tuesText"
+            android:layout_column="2"
+            android:layout_marginLeft="10dp"
+            android:layout_row="2"
+            android:layout_marginTop="30dp" />
+
+        <TextView
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:textAppearance="?android:attr/textAppearanceMedium"
+            android:text="水"
+            android:id="@+id/wedText"
+            android:layout_column="3"
+            android:layout_marginLeft="10dp"
+            android:layout_row="2"
+            android:layout_marginTop="30dp" />
+
+        <TextView
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:textAppearance="?android:attr/textAppearanceMedium"
+            android:text="木"
+            android:id="@+id/thursText"
+            android:layout_column="4"
+            android:layout_marginLeft="10dp"
+            android:layout_row="2"
+            android:layout_marginTop="30dp" />
+
+        <TextView
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:textAppearance="?android:attr/textAppearanceMedium"
+            android:text="金"
+            android:id="@+id/friText"
+            android:layout_column="5"
+            android:layout_marginLeft="10dp"
+            android:layout_row="2"
+            android:layout_marginTop="30dp" />
+
+        <TextView
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:textAppearance="?android:attr/textAppearanceMedium"
+            android:text="土"
+            android:id="@+id/satText"
+            android:layout_column="6"
+            android:layout_marginLeft="10dp"
+            android:layout_row="2"
+            android:layout_marginTop="30dp" />
+
+        <TextView
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:textAppearance="?android:attr/textAppearanceMedium"
+            android:text="Day"
+            android:id="@+id/day1"
+            android:layout_row="3"
+            android:layout_column="0"
+            android:layout_marginLeft="0dp"
+            android:layout_marginTop="30dp" />
+
+        <TextView
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:textAppearance="?android:attr/textAppearanceMedium"
+            android:text="Day"
+            android:id="@+id/day2"
+            android:layout_row="3"
+            android:layout_column="1"
+            android:layout_marginLeft="10dp"
+            android:layout_marginTop="30dp" />
+
+        <TextView
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:textAppearance="?android:attr/textAppearanceMedium"
+            android:text="Day"
+            android:id="@+id/day3"
+            android:layout_row="3"
+            android:layout_column="2"
+            android:layout_marginLeft="10dp"
+            android:layout_marginTop="30dp" />
+
+        <TextView
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:textAppearance="?android:attr/textAppearanceMedium"
+            android:text="Day"
+            android:id="@+id/day4"
+            android:layout_row="3"
+            android:layout_column="3"
+            android:layout_marginLeft="10dp"
+            android:layout_marginTop="30dp" />
+
+        <TextView
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:textAppearance="?android:attr/textAppearanceMedium"
+            android:text="Day"
+            android:id="@+id/day5"
+            android:layout_row="3"
+            android:layout_column="4"
+            android:layout_marginLeft="10dp"
+            android:layout_marginTop="30dp" />
+
+        <TextView
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:textAppearance="?android:attr/textAppearanceMedium"
+            android:text="Day"
+            android:id="@+id/day6"
+            android:layout_row="3"
+            android:layout_column="5"
+            android:layout_marginLeft="10dp"
+            android:layout_marginTop="30dp" />
+
+        <TextView
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:textAppearance="?android:attr/textAppearanceMedium"
+            android:text="Day"
+            android:id="@+id/day7"
+            android:layout_row="3"
+            android:layout_column="6"
+            android:layout_marginLeft="10dp"
+            android:layout_marginTop="30dp" />
+
+        <TextView
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:textAppearance="?android:attr/textAppearanceMedium"
+            android:text="Day"
+            android:id="@+id/day8"
+            android:layout_row="4"
+            android:layout_column="0"
+            android:layout_marginLeft="0dp"
+            android:layout_marginTop="10dp" />
+
+        <TextView
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:textAppearance="?android:attr/textAppearanceMedium"
+            android:text="Day"
+            android:id="@+id/day9"
+            android:layout_row="4"
+            android:layout_column="1"
+            android:layout_marginLeft="10dp"
+            android:layout_marginTop="10dp" />
+
+        <TextView
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:textAppearance="?android:attr/textAppearanceMedium"
+            android:text="Day"
+            android:id="@+id/day10"
+            android:layout_row="4"
+            android:layout_column="2"
+            android:layout_marginLeft="10dp"
+            android:layout_marginTop="10dp" />
+
+        <TextView
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:textAppearance="?android:attr/textAppearanceMedium"
+            android:text="Day"
+            android:id="@+id/day11"
+            android:layout_row="4"
+            android:layout_column="3"
+            android:layout_marginLeft="10dp"
+            android:layout_marginTop="10dp" />
+
+        <TextView
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:textAppearance="?android:attr/textAppearanceMedium"
+            android:text="Day"
+            android:id="@+id/day12"
+            android:layout_row="4"
+            android:layout_column="4"
+            android:layout_marginLeft="10dp"
+            android:layout_marginTop="10dp" />
+
+        <TextView
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:textAppearance="?android:attr/textAppearanceMedium"
+            android:text="Day"
+            android:id="@+id/day13"
+            android:layout_row="4"
+            android:layout_column="5"
+            android:layout_marginLeft="10dp"
+            android:layout_marginTop="10dp" />
+
+        <TextView
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:textAppearance="?android:attr/textAppearanceMedium"
+            android:text="Day"
+            android:id="@+id/day14"
+            android:layout_row="4"
+            android:layout_column="6"
+            android:layout_marginLeft="10dp"
+            android:layout_marginTop="10dp" />
+
+        <TextView
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:textAppearance="?android:attr/textAppearanceMedium"
+            android:text="Day"
+            android:id="@+id/day15"
+            android:layout_row="5"
+            android:layout_column="0"
+            android:layout_marginLeft="0dp"
+            android:layout_marginTop="10dp" />
+
+        <TextView
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:textAppearance="?android:attr/textAppearanceMedium"
+            android:text="Day"
+            android:id="@+id/day16"
+            android:layout_row="5"
+            android:layout_column="1"
+            android:layout_marginLeft="10dp"
+            android:layout_marginTop="10dp" />
+
+        <TextView
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:textAppearance="?android:attr/textAppearanceMedium"
+            android:text="Day"
+            android:id="@+id/day17"
+            android:layout_row="5"
+            android:layout_column="2"
+            android:layout_marginLeft="10dp"
+            android:layout_marginTop="10dp" />
+
+        <TextView
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:textAppearance="?android:attr/textAppearanceMedium"
+            android:text="Day"
+            android:id="@+id/day18"
+            android:layout_row="5"
+            android:layout_column="3"
+            android:layout_marginLeft="10dp"
+            android:layout_marginTop="10dp" />
+
+        <TextView
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:textAppearance="?android:attr/textAppearanceMedium"
+            android:text="Day"
+            android:id="@+id/day19"
+            android:layout_row="5"
+            android:layout_column="4"
+            android:layout_marginLeft="10dp"
+            android:layout_marginTop="10dp" />
+
+        <TextView
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:textAppearance="?android:attr/textAppearanceMedium"
+            android:text="Day"
+            android:id="@+id/day20"
+            android:layout_row="5"
+            android:layout_column="5"
+            android:layout_marginLeft="10dp"
+            android:layout_marginTop="10dp" />
+
+        <TextView
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:textAppearance="?android:attr/textAppearanceMedium"
+            android:text="Day"
+            android:id="@+id/day21"
+            android:layout_row="5"
+            android:layout_column="6"
+            android:layout_marginLeft="10dp"
+            android:layout_marginTop="10dp" />
+
+        <TextView
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:textAppearance="?android:attr/textAppearanceMedium"
+            android:text="Day"
+            android:id="@+id/day22"
+            android:layout_row="6"
+            android:layout_column="0"
+            android:layout_marginLeft="0dp"
+            android:layout_marginTop="10dp" />
+
+        <TextView
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:textAppearance="?android:attr/textAppearanceMedium"
+            android:text="Day"
+            android:id="@+id/day23"
+            android:layout_row="6"
+            android:layout_column="1"
+            android:layout_marginLeft="10dp"
+            android:layout_marginTop="10dp" />
+
+        <TextView
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:textAppearance="?android:attr/textAppearanceMedium"
+            android:text="Day"
+            android:id="@+id/day24"
+            android:layout_row="6"
+            android:layout_column="2"
+            android:layout_marginLeft="10dp"
+            android:layout_marginTop="10dp" />
+
+        <TextView
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:textAppearance="?android:attr/textAppearanceMedium"
+            android:text="Day"
+            android:id="@+id/day25"
+            android:layout_row="6"
+            android:layout_column="3"
+            android:layout_marginLeft="10dp"
+            android:layout_marginTop="10dp" />
+
+        <TextView
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:textAppearance="?android:attr/textAppearanceMedium"
+            android:text="Day"
+            android:id="@+id/day26"
+            android:layout_row="6"
+            android:layout_column="4"
+            android:layout_marginLeft="10dp"
+            android:layout_marginTop="10dp" />
+
+        <TextView
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:textAppearance="?android:attr/textAppearanceMedium"
+            android:text="Day"
+            android:id="@+id/day27"
+            android:layout_row="6"
+            android:layout_column="5"
+            android:layout_marginLeft="10dp"
+            android:layout_marginTop="10dp" />
+
+        <TextView
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:textAppearance="?android:attr/textAppearanceMedium"
+            android:text="Day"
+            android:id="@+id/day28"
+            android:layout_row="6"
+            android:layout_column="6"
+            android:layout_marginLeft="10dp"
+            android:layout_marginTop="10dp" />
+
+        <TextView
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:textAppearance="?android:attr/textAppearanceMedium"
+            android:text="Day"
+            android:id="@+id/day29"
+            android:layout_row="7"
+            android:layout_column="0"
+            android:layout_marginLeft="0dp"
+            android:layout_marginTop="10dp" />
+
+        <TextView
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:textAppearance="?android:attr/textAppearanceMedium"
+            android:text="Day"
+            android:id="@+id/day30"
+            android:layout_row="7"
+            android:layout_column="1"
+            android:layout_marginLeft="10dp"
+            android:layout_marginTop="10dp" />
+
+        <TextView
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:textAppearance="?android:attr/textAppearanceMedium"
+            android:text="Day"
+            android:id="@+id/day31"
+            android:layout_row="7"
+            android:layout_column="2"
+            android:layout_marginLeft="10dp"
+            android:layout_marginTop="10dp" />
+
+        <TextView
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:textAppearance="?android:attr/textAppearanceMedium"
+            android:text="Day"
+            android:id="@+id/day32"
+            android:layout_row="7"
+            android:layout_column="3"
+            android:layout_marginLeft="10dp"
+            android:layout_marginTop="10dp" />
+
+        <TextView
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:textAppearance="?android:attr/textAppearanceMedium"
+            android:text="Day"
+            android:id="@+id/day33"
+            android:layout_row="7"
+            android:layout_column="4"
+            android:layout_marginLeft="10dp"
+            android:layout_marginTop="10dp" />
+
+        <TextView
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:textAppearance="?android:attr/textAppearanceMedium"
+            android:text="Day"
+            android:id="@+id/day34"
+            android:layout_row="7"
+            android:layout_column="5"
+            android:layout_marginLeft="10dp"
+            android:layout_marginTop="10dp" />
+
+        <TextView
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:textAppearance="?android:attr/textAppearanceMedium"
+            android:text="Day"
+            android:id="@+id/day35"
+            android:layout_row="7"
+            android:layout_column="6"
+            android:layout_marginLeft="10dp"
+            android:layout_marginTop="10dp" />
+
+        <TextView
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:textAppearance="?android:attr/textAppearanceMedium"
+            android:text="Day"
+            android:id="@+id/day36"
+            android:layout_row="8"
+            android:layout_column="0"
+            android:layout_marginTop="10dp"
+            android:layout_marginLeft="0dp" />
+
+        <TextView
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:textAppearance="?android:attr/textAppearanceMedium"
+            android:text="Day"
+            android:id="@+id/day37"
+            android:layout_row="8"
+            android:layout_column="1"
+            android:layout_marginTop="10dp"
+            android:layout_marginLeft="10dp" />
+
+    </GridLayout>
+</RelativeLayout>
